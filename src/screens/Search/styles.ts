@@ -9,13 +9,18 @@ export const HeaderContainer = styled.View`
   background-color: #00aaf2;
   padding: 16px;
   align-items: center;
-  justify-content: space-between;
 `;
 
-export const SerchButton = styled.TouchableOpacity``;
+export const SerchInput = styled.TextInput`
+  background-color: #00aaf2;
+  padding: 0 8px;
+  color: #fff;
+  font-size: 16px;
+  margin-left: 20px;
+`;
+
+export const CancelButton = styled.TouchableOpacity``;
 
 export const ContentContainer = styled.ScrollView`
   padding: 0 16px;
 `;
-
-export const EmptyContent = styled.View``;

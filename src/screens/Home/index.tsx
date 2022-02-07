@@ -6,15 +6,17 @@ import {useNavigation} from '@react-navigation/native';
 import {
   Container,
   HeaderContainer,
+  SerchButton,
   ContentContainer,
   EmptyContent,
 } from './styles';
 import {Icon} from '../../assets/images/icons';
+
 const Home: React.FC = () => {
   const {navigate} = useNavigation();
 
-  const HandleNavigationToFavorites = () => {
-    navigate('Favorites');
+  const HandleNavigationToSearch = () => {
+    navigate('Search');
   };
 
   return (
@@ -23,7 +25,9 @@ const Home: React.FC = () => {
         <Text weight="Medium" size={20} color="#f5f5f5">
           Cidades
         </Text>
-        <Icon.Serch />
+        <SerchButton onPress={HandleNavigationToSearch}>
+          <Icon.Serch />
+        </SerchButton>
       </HeaderContainer>
       <ContentContainer>
         <EmptyContent>
