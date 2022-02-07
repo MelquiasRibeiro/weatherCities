@@ -16,7 +16,7 @@ import {Icon} from '../../assets/images/icons';
 const Home: React.FC = () => {
   const [savedCities, setSavedCities] = useState([
     {
-      city: 'blumenaus',
+      city: 'Blumenaus',
       county: 'brasil',
       weater: 'Chuva fraca',
       temp: '18º',
@@ -25,7 +25,7 @@ const Home: React.FC = () => {
       min: '22º',
     },
     {
-      city: 'blumenaus',
+      city: 'Blumenau',
       county: 'brasil',
       weater: 'Chuva fraca',
       temp: '18º',
@@ -34,7 +34,7 @@ const Home: React.FC = () => {
       min: '22º',
     },
     {
-      city: 'blumenaus',
+      city: 'Sao luis',
       county: 'brasil',
       weater: 'Chuva fraca',
       temp: '18º',
@@ -73,7 +73,7 @@ const Home: React.FC = () => {
             </Text>
           </EmptyContent>
         ) : (
-          savedCities.map(city => <SavedCityCard city={city} />)
+          savedCities.map(city => <SavedCityCard key={city.city} city={city} />)
         )}
       </ContentContainer>
     </Container>

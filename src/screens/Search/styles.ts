@@ -17,6 +17,7 @@ export const SerchInput = styled.TextInput`
   color: #fff;
   font-size: 16px;
   margin-left: 20px;
+  flex: 1;
 `;
 
 export const CancelButton = styled.TouchableOpacity``;
