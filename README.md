@@ -13,8 +13,10 @@
 ### requisitos:
 - Node;
 - npm;
-- expo;
 - git;
+- chave de para acessar a API;
+
+#### Crie um arquivo chamado 'vars.ts' na raiz do projeto identico ao 'vars-exemple' substituindo sua chave de acesso a API
 
 ### execute os comando a seguir:
 
@@ -23,6 +25,8 @@
     $ npm install
     $ npm run android
 <br/>
+
+
 <br/>
 <br/>
 <div id="aboutIt">
