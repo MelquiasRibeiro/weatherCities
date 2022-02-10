@@ -1,7 +1,6 @@
 # OSX
 #
 .DS_Store
-
 # Xcode
 #
 build/
@@ -58,3 +57,4 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+vars.ts

@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, {useContext} from 'react';
 import {Text} from '../../components/Text';
 import {Margin} from '../../components/Margin';
 import SavedCityCard from '../../components/SavedCityCard';
-
+import {SavedCitiesContext} from '../../providers/MyCities';
 import {useNavigation} from '@react-navigation/native';
 import {
   Container,
@@ -10,39 +10,14 @@ import {
   SerchButton,
   ContentContainer,
   EmptyContent,
+  SettingsButton,
+  RowContinaer,
 } from './styles';
 import {Icon} from '../../assets/images/icons';
 
 const Home: React.FC = () => {
-  const [savedCities, setSavedCities] = useState([
-    {
-      city: 'Blumenaus',
-      county: 'brasil',
-      weater: 'Chuva fraca',
-      temp: '18º',
-      favorite: true,
-      max: '14º',
-      min: '22º',
-    },
-    {
-      city: 'Blumenau',
-      county: 'brasil',
-      weater: 'Chuva fraca',
-      temp: '18º',
-      favorite: false,
-      max: '14º',
-      min: '22º',
-    },
-    {
-      city: 'Sao luis',
-      county: 'brasil',
-      weater: 'Chuva fraca',
-      temp: '18º',
-      favorite: true,
-      max: '14º',
-      min: '22º',
-    },
-  ]);
+  const {cities} = useContext(SavedCitiesContext);
+
   const {navigate} = useNavigation();
 
   const HandleNavigationToSearch = () => {
@@ -55,13 +30,18 @@ const Home: React.FC = () => {
         <Text weight="Medium" size={20} color="#f5f5f5">
           Cidades
         </Text>
-        <SerchButton onPress={HandleNavigationToSearch}>
-          <Icon.Serch />
-        </SerchButton>
+        <RowContinaer>
+          <SettingsButton>
+            <Icon.GearIcon />
+          </SettingsButton>
+          <SerchButton onPress={HandleNavigationToSearch}>
+            <Icon.Serch />
+          </SerchButton>
+        </RowContinaer>
       </HeaderContainer>
       <ContentContainer>
         <Margin margin={16} />
-        {!savedCities ? (
+        {cities.length === 0 ? (
           <EmptyContent>
             <Margin margin={44} />
             <Text weight="Medium" size={20} color="#000000" align="center">
@@ -73,7 +53,7 @@ const Home: React.FC = () => {
             </Text>
           </EmptyContent>
         ) : (
-          savedCities.map(city => <SavedCityCard key={city.city} city={city} />)
+          cities.map(city => <SavedCityCard key={city.id} city={city} />)
         )}
       </ContentContainer>
     </Container>

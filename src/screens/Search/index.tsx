@@ -27,7 +27,6 @@ const Search: React.FC = () => {
       );
 
       setCities(data);
-      console.log('acabou');
     } catch (error) {
       console.log(error);
     }
@@ -37,7 +36,6 @@ const Search: React.FC = () => {
     const filterdCities = cities.filter(city => {
       return city?.nome.toLowerCase().includes(cityName[0]);
     });
-    console.log('filterdCities', filterdCities);
     setDisplayedCities(filterdCities);
   };
 
@@ -66,6 +64,7 @@ const Search: React.FC = () => {
           value={displayValue}
           onChangeText={text => HandleChage(text)}
           autoFocus={true}
+          selectionColor={'white'}
         />
       </HeaderContainer>
       <ContentContainer>
