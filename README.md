@@ -48,3 +48,9 @@ Os dados climáticos são obtidos através da API do openWeather <a href="https:
 ![image](https://user-images.githubusercontent.com/54459438/153336485-9cf400a7-634d-48a0-b33f-94b88db9e1a9.png)
 ![image](https://user-images.githubusercontent.com/54459438/153336557-60a5b706-f6d4-4fa8-aa5f-2d6a913fbba0.png)
 ![image](https://user-images.githubusercontent.com/54459438/153336615-2830a148-03a3-4b1a-aae6-237b5359a2c6.png)
+
+
+## Melhorias
+
+- Add Lista de  Favoritos;
+- Tela de ajustes para modificar Idioma e Unidades
